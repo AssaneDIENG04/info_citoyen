@@ -412,7 +412,7 @@ btn-lien {
     font-size: 0.95rem;
 }
 .header-education {
-    background-color: lianear-gradient(135deg, #1a6b3a, #2e9e5b);
+    background: linear-gradient(135deg, #1a6b3a, #2e9e5b);
 }
 /* FOOTER */
 footer {
@@ -458,7 +458,7 @@ footer {
     .grill-domaines {
         grid-template-columns: repeat(2, 1fr);
     }
-    .hero h1 {
+    .page-header h1 {
         font-size: 1.8rem;
     }
     .domaines {
@@ -481,5 +481,48 @@ footer {
     }
     .carte {
         padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grill-domaines {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .page-header h1 {
+        font-size: 1.4rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .carte {
+        padding: 20px 15px;
+    }
+    .carte-icone {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    .carte h3 {
+        font-size: 1.1rem;
+    }
+    .accordeon-titre {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+    .accordeon-contenu {
+        padding: 20px;
+    }
+    .tableau-info {
+        font-size: 0.75rem;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+    .tableau-info th,
+    .tableau-info td {
+        padding: 6px 8px;
+        min-width: 100px;
     }
 }
