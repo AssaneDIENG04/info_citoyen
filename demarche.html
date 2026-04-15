@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démarches Administratives — InfoCitoyen Sénégal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="sante.html">Santé</a></li>
+        <li><a href="emploi.html">Emploi</a></li>
+        <li><a href="demarche.html">Démarches</a></li>
+        <li><a href="entrepreneuriat.html">Entrepreneuriat</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- EN-TÊTE DE PAGE -->
+<div class="page-header header-demarches">
+    <div class="page-header-contenu">
+        <span class="page-icone">📋</span>
+        <h1>Démarches Administratives</h1>
+        <p>CNI, passeport, acte de naissance, casier judiciaire, mariage civil et autres documents officiels</p>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="page-contenu">
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="recherche-container">
+        <input
+            type="text"
+            id="recherche"
+            class="barre-recherche"
+            placeholder="🔍 Rechercher une information..."
+            onkeyup="filtrerContenu()"
+        >
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <div class="accordeons" id="contenu-filtrable">
+
+        <!-- ACCORDÉON 1 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🪪 Carte Nationale d'Identité (CNI)
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Tout citoyen sénégalais âgé d'au moins 5 ans peut demander une CNI. Elle est <strong>obligatoire à partir de 15 ans</strong>.</p>
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Documents requis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Première demande</strong></td>
+                            <td>Extrait de naissance (-3 mois), certificat de nationalité, photo biométrique, justificatif de domicile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Renouvellement</strong></td>
+                            <td>Ancienne CNI + copie, extrait de naissance récent, photo biométrique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Perte</strong></td>
+                            <td>Certificat de perte (police), extrait de naissance (-3 mois), timbre fiscal 10 000 FCFA, photo biométrique</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Coût :</strong> 10 000 FCFA | <strong>Validité :</strong> 10 ans | <strong>Délai :</strong> 1 à 2 semaines</p>
+                <p>⚠️ Sans CNI après 15 ans : amende de <strong>6 000 FCFA</strong> (12 000 FCFA en cas de récidive)</p>
+                <p><strong>Où s'adresser :</strong> Commissariat de police, brigade de gendarmerie ou préfecture</p>
+                <a href="https://daf.sn" target="_blank" class="btn-lien">DAF — Direction Automatisation Fichiers →</a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 2 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🛂 Passeport
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Tout citoyen sénégalais peut, dès la naissance, demander un passeport ordinaire biométrique.</p>
+                <h4>Documents requis</h4>
+                <ul>
+                    <li>CNI biométrique CEDEAO (original + copie recto-verso)</li>
+                    <li>Quittance de paiement des droits</li>
+                    <li>Pour enfants mineurs : autorisation parentale + copie CNI du parent</li>
+                    <li>Pour enfants de moins de 5 ans : extrait de naissance (-3 mois)</li>
+                    <li>Étudiants : carte d'étudiant ou certificat de scolarité</li>
+                </ul>
+                <p><strong>Coût :</strong> 20 000 FCFA | <strong>Validité :</strong> 5 ans</p>
+                <p>⚠️ Entamer les démarches de renouvellement <strong>6 mois avant</strong> l'expiration.</p>
+                <p><strong>Où s'adresser :</strong> Commissariat de police (DPETV à Dakar)</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 3 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                📜 Acte de naissance
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>L'acte de naissance est le document fondamental de l'état civil. Indispensable pour obtenir tous les autres documents officiels.</p>
+                <p><strong>Coût :</strong> 200 à 500 FCFA selon les communes</p>
+                <p><strong>Où s'adresser :</strong> Centre d'état civil du lieu de naissance</p>
+                <p>Pour les naissances à l'étranger : s'adresser au Ministère des Affaires Étrangères ou à la représentation diplomatique sénégalaise.</p>
+                <p>⚠️ Au-delà du <strong>45ème jour</strong> après la naissance, une procédure judiciaire est requise.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 4 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                📋 Casier judiciaire
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Le casier judiciaire est exigé dans de nombreux dossiers : emploi, concours, création d'entreprise...</p>
+                <h4>Deux types de bulletins</h4>
+                <ul>
+                    <li><strong>Bulletin n°2</strong> — demandé par les autorités ou les employeurs</li>
+                    <li><strong>Bulletin n°3</strong> — demandé par l'intéressé lui-même</li>
+                </ul>
+                <p><strong>Coût :</strong> Gratuit | <strong>Validité :</strong> 3 mois</p>
+                <p><strong>Où s'adresser :</strong> Tribunal régional du lieu de naissance</p>
+                <p>✅ Désormais disponible en ligne via le portail <strong>e-senegal.sn</strong></p>
+                <a href="https://e-senegal.sn" target="_blank" class="btn-lien">e-Sénégal →</a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 5 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏠 Certificat de résidence
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Permet de justifier son lieu d'habitation. Souvent demandé pour constituer des dossiers administratifs.</p>
+                <p><strong>Où s'adresser :</strong> Délégué de quartier (chef de quartier)</p>
+                <p><strong>Coût :</strong> Entre 200 et 500 FCFA</p>
+                <p><strong>Documents requis :</strong> Pièce d'identité + justificatif d'habitation (bail, facture eau/électricité...)</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 6 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏛️ Certificat de nationalité
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Prouve la nationalité sénégalaise. Requis en cas de doute lors de la demande de CNI ou pour certaines démarches judiciaires.</p>
+                <p><strong>Où s'adresser :</strong> Greffe du tribunal régional du lieu de naissance</p>
+                <p><strong>Coût :</strong> 2 300 FCFA</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 7 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💍 Mariage civil
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Le mariage civil doit être célébré à la mairie avant toute cérémonie religieuse ou coutumière pour avoir une valeur légale.</p>
+                <h4>Documents requis</h4>
+                <ul>
+                    <li>Demande écrite adressée au maire</li>
+                    <li>CNI ou passeport des deux futurs époux (originaux + copies)</li>
+                    <li>Copies intégrales de l'acte de naissance de moins de 3 mois</li>
+                    <li>Certificat médical prénuptial</li>
+                    <li>Photocopies des CNI de deux témoins majeurs (un par époux)</li>
+                </ul>
+                <p><strong>Coût :</strong> 25 000 à 50 000 FCFA | <strong>Où s'adresser :</strong> Mairie du lieu du mariage</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 8 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                👶 Déclaration de naissance
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>La déclaration de naissance est obligatoire. Elle permet d'obtenir immédiatement l'acte de naissance.</p>
+                <p><strong>Où s'adresser :</strong> Centre d'état civil du lieu de naissance</p>
+                <p><strong>Coût :</strong> Gratuit</p>
+                <p><strong>Délai :</strong> Du jour de la naissance jusqu'à 1 an après</p>
+                <p>⚠️ Au-delà du 45ème jour, une procédure judiciaire est nécessaire.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 9 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💻 Services administratifs en ligne — e-Sénégal
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Le gouvernement sénégalais a lancé la numérisation de plusieurs démarches administratives via le portail <strong>e-senegal.sn</strong>.</p>
+                <ul>
+                    <li>✅ Casier judiciaire disponible en ligne</li>
+                    <li>✅ Certificat de nationalité disponible en ligne</li>
+                    <li>✅ Attestation de non-appartenance à la Fonction publique</li>
+                    <li>🔜 Prochainement : permis de construire, actes d'état civil, documents fonciers</li>
+                </ul>
+                <a href="https://e-senegal.sn" target="_blank" class="btn-lien">Portail e-Sénégal →</a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 10 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔗 Liens officiels utiles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul class="liste-liens">
+                    <li><a href="https://senegalservices.sn" target="_blank">Sénégal Services</a></li>
+                    <li><a href="https://e-senegal.sn" target="_blank">e-Sénégal</a></li>
+                    <li><a href="https://daf.sn" target="_blank">DAF — Direction Automatisation Fichiers</a></li>
+                    <li><a href="https://justice.sec.gouv.sn" target="_blank">Ministère de la Justice</a></li>
+                    <li><a href="https://interieur.sec.gouv.sn" target="_blank">Ministère de l'Intérieur</a></li>
+                    <li><a href="https://diplomatie.gouv.sn" target="_blank">Ministère des Affaires Étrangères</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-contenu">
+        <div class="footer-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+        <p>Portail d'information citoyenne du Sénégal</p>
+        <p class="footer-copy">© 2026 InfoCitoyen Sénégal — Tous droits réservés</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

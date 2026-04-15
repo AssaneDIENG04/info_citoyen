@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneuriat — InfoCitoyen Sénégal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="sante.html">Santé</a></li>
+        <li><a href="emploi.html">Emploi</a></li>
+        <li><a href="demarche.html">Démarches</a></li>
+        <li><a href="entrepreneuriat.html">Entrepreneuriat</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- EN-TÊTE DE PAGE -->
+<div class="page-header header-entrepreneuriat">
+    <div class="page-header-contenu">
+        <span class="page-icone">🚀</span>
+        <h1>Entrepreneuriat</h1>
+        <p>Créer son entreprise, trouver un financement et développer son projet au Sénégal</p>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="page-contenu">
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="recherche-container">
+        <input
+            type="text"
+            id="recherche"
+            class="barre-recherche"
+            placeholder="🔍 Rechercher une information..."
+            onkeyup="filtrerContenu()"
+        >
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <div class="accordeons" id="contenu-filtrable">
+
+        <!-- ACCORDÉON 1 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💡 Pourquoi entreprendre au Sénégal ?
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Le Sénégal offre un terrain favorable à l'entrepreneuriat grâce à une population jeune et dynamique, des politiques publiques ambitieuses et un écosystème en pleine croissance.</p>
+                <ul>
+                    <li>Plus de 60% de la population a moins de 25 ans</li>
+                    <li>Écosystème en plein essor : incubateurs, fonds publics, partenaires internationaux</li>
+                    <li>Marché régional attractif : hub de l'UEMOA et de la CEDEAO</li>
+                    <li>Plan Horizon 2050 : accent sur l'entrepreneuriat et l'innovation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 2 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏗️ Étapes pour créer son entreprise
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Forme juridique</th>
+                            <th>Caractéristiques</th>
+                            <th>Idéal pour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Entreprise Individuelle (EI)</strong></td>
+                            <td>Simplicité maximale, pas de capital requis</td>
+                            <td>Débuter avec peu de moyens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SARL</strong></td>
+                            <td>Capital minimum requis, responsabilité limitée</td>
+                            <td>PME avec plusieurs associés</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SA</strong></td>
+                            <td>Capital plus élevé, gouvernance structurée</td>
+                            <td>Grandes entreprises, levée de fonds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GIE</strong></td>
+                            <td>Regroupement de personnes physiques ou morales</td>
+                            <td>Groupements, associations de producteurs</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Les étapes clés</h4>
+                <ul>
+                    <li><strong>Étape 1</strong> — Choisir sa forme juridique</li>
+                    <li><strong>Étape 2</strong> — Déposer son dossier au BCE de l'APIX (création en 48h)</li>
+                    <li><strong>Étape 3</strong> — Obtenir son NINEA (numéro fiscal)</li>
+                    <li><strong>Étape 4</strong> — S'inscrire aux obligations sociales et fiscales</li>
+                </ul>
+                <p>⚠️ La formalisation est indispensable pour accéder aux financements publics et aux marchés.</p>
+                <a href="https://investinsenegal.sn" target="_blank" class="btn-lien">APIX — Créer son entreprise →</a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 3 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏛️ Structures d'appui à l'entrepreneuriat
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Structure</th>
+                            <th>Rôle</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>APIX / BCE</strong></td>
+                            <td>Création d'entreprise en 48h</td>
+                            <td><a href="https://investinsenegal.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>DER/FJ</strong></td>
+                            <td>Financement jeunes et femmes</td>
+                            <td><a href="https://der.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ADEPME</strong></td>
+                            <td>Appui et encadrement des PME</td>
+                            <td><a href="https://adepme.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>FONGIP</strong></td>
+                            <td>Garantie des investissements</td>
+                            <td><a href="https://fongip.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>BNDE</strong></td>
+                            <td>Banque nationale de développement</td>
+                            <td><a href="https://bnde.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>FONSIS</strong></td>
+                            <td>Fonds souverain, projets stratégiques</td>
+                            <td><a href="https://fonsis.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SénégalPME</strong></td>
+                            <td>Guichet unique financement PME</td>
+                            <td><a href="https://senegalpme.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 4 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💰 Financement disponible
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>DER/FJ — Délégation Générale à l'Entrepreneuriat Rapide</h4>
+                <ul>
+                    <li>Financements entre <strong>500 000 FCFA et 30 millions FCFA</strong></li>
+                    <li>Cible : femmes et jeunes de moins de 40 ans</li>
+                    <li>Prêts à taux réduits ou sans intérêts</li>
+                    <li>Présence dans les 14 régions du Sénégal</li>
+                </ul>
+                <a href="https://der.sn" target="_blank" class="btn-lien">DER/FJ →</a>
+
+                <h4>FONGIP — Fonds de Garantie des Investissements</h4>
+                <ul>
+                    <li>Taux bonifiés entre <strong>5 et 8%</strong></li>
+                    <li>Apport de 10% du montant requis</li>
+                    <li>Secteurs : agriculture, artisanat, tourisme, énergies renouvelables...</li>
+                </ul>
+                <a href="https://fongip.sn" target="_blank" class="btn-lien">FONGIP →</a>
+
+                <h4>Autres sources de financement</h4>
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Structure</th>
+                            <th>Rôle</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>BNDE</strong></td>
+                            <td>Banque de développement pour PME</td>
+                            <td><a href="https://bnde.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>CMS</strong></td>
+                            <td>Crédit Mutuel du Sénégal — microfinance</td>
+                            <td><a href="https://cms.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>PAMECAS</strong></td>
+                            <td>Institution de microfinance</td>
+                            <td><a href="https://pamecas.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tony Elumelu Foundation</strong></td>
+                            <td>Financement startups africaines — 5 000 USD</td>
+                            <td><a href="https://tonyelumelufoundation.org" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Orange Fab</strong></td>
+                            <td>Accélérateur startups innovation mobile</td>
+                            <td><a href="https://orangefab.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ambassade des USA</strong></td>
+                            <td>Concours et programmes de financement</td>
+                            <td><a href="https://sn.usembassy.gov" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Union Européenne</strong></td>
+                            <td>Appels à projets et financements</td>
+                            <td><a href="https://eeas.europa.eu" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dakar Network Angels</strong></td>
+                            <td>Réseau de Business Angels local</td>
+                            <td><a href="https://dakarnetworkangels.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 5 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏢 Incubateurs et accélérateurs
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Incubateur</th>
+                            <th>Spécialité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CTIC Dakar</strong></td>
+                            <td>1er incubateur TIC d'Afrique de l'Ouest francophone — startups numériques</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Impact Hub Dakar</strong></td>
+                            <td>Entrepreneuriat à impact social</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Orange Fab</strong></td>
+                            <td>Innovation, tech, mobile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>La Fabrique</strong></td>
+                            <td>Projets créatifs et culturels</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BIC Dakar</strong></td>
+                            <td>Projets industriels</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jokkolabs</strong></td>
+                            <td>Coworking, communauté tech</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 6 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                📈 Secteurs porteurs en 2025
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Secteur</th>
+                            <th>Opportunités clés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Agriculture moderne</strong></td>
+                            <td>Transformation locale, agro-industrie, export</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Numérique et tech</strong></td>
+                            <td>Applications mobiles, e-commerce, fintech, IA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Énergies renouvelables</strong></td>
+                            <td>Solaire, biogaz, efficacité énergétique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tourisme durable</strong></td>
+                            <td>Éco-tourisme, patrimoine culturel, hospitality</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Logistique et transport</strong></td>
+                            <td>Port de Ndayane, TER, corridors régionaux</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Santé et biotechnologie</strong></td>
+                            <td>Télémédecine, pharmacie, équipements médicaux</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mode et textile local</strong></td>
+                            <td>Prêt-à-porter, design africain, accessoires</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Éducation et formation</strong></td>
+                            <td>E-learning, centres de formation, EdTech</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 7 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💡 Conseils pratiques
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>✅ Ce qu'il faut faire</h4>
+                <ul>
+                    <li>Préparer un <strong>business plan solide</strong> — élément déterminant de tout dossier</li>
+                    <li>Se formaliser via l'APIX pour accéder aux financements publics</li>
+                    <li>Obtenir le RCCM et le NINEA — indispensables pour la crédibilité</li>
+                    <li>Suivre les appels à projets de la DER, ADEPME, BNDE et ambassades</li>
+                    <li>Participer aux événements : Startup Grind Dakar, Dakar Digital Show</li>
+                    <li>Se faire accompagner par un incubateur ou un coach</li>
+                </ul>
+                <h4>❌ Ce qu'il faut éviter</h4>
+                <ul>
+                    <li>Sous-estimer la qualité du business plan</li>
+                    <li>Ne pas respecter les délais de dépôt</li>
+                    <li>Oublier les documents légaux obligatoires</li>
+                    <li>Présenter des projections financières irréalistes</li>
+                    <li>Négliger la formalisation — sans RCCM/NINEA, pas de financement public</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 8 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔗 Liens officiels utiles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul class="liste-liens">
+                    <li><a href="https://investinsenegal.sn" target="_blank">APIX / BCE</a></li>
+                    <li><a href="https://der.sn" target="_blank">DER/FJ</a></li>
+                    <li><a href="https://adepme.sn" target="_blank">ADEPME</a></li>
+                    <li><a href="https://fongip.sn" target="_blank">FONGIP</a></li>
+                    <li><a href="https://senegalpme.sn" target="_blank">SénégalPME — Guichet unique</a></li>
+                    <li><a href="https://senegalservices.sn" target="_blank">Sénégal Services</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-contenu">
+        <div class="footer-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+        <p>Portail d'information citoyenne du Sénégal</p>
+        <p class="footer-copy">© 2026 InfoCitoyen Sénégal — Tous droits réservés</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

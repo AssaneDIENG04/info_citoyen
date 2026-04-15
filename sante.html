@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé — InfoCitoyen Sénégal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="sante.html">Santé</a></li>
+        <li><a href="emploi.html">Emploi</a></li>
+        <li><a href="demarche.html">Démarches</a></li>
+        <li><a href="entrepreneuriat.html">Entrepreneuriat</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- EN-TÊTE DE PAGE -->
+<div class="page-header header-sante">
+    <div class="page-header-contenu">
+        <span class="page-icone">🏥</span>
+        <h1>Santé</h1>
+        <p>Hôpitaux, couverture maladie, urgences, gratuités et structures sanitaires au Sénégal</p>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="page-contenu">
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="recherche-container">
+        <input
+            type="text"
+            id="recherche"
+            class="barre-recherche"
+            placeholder="🔍 Rechercher une information..."
+            onkeyup="filtrerContenu()"
+        >
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <div class="accordeons" id="contenu-filtrable">
+
+        <!-- ACCORDÉON 1 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🚨 Numéros d'urgence
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Numéro</th>
+                            <th>Disponibilité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SAMU National</strong></td>
+                            <td>1515 (gratuit)</td>
+                            <td>24h/24 — 7j/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sapeurs-Pompiers</strong></td>
+                            <td>18</td>
+                            <td>24h/24 — 7j/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Police Nationale</strong></td>
+                            <td>17</td>
+                            <td>24h/24 — 7j/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Santé Mentale</strong></td>
+                            <td>143</td>
+                            <td>Disponible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pharmacies de garde</strong></td>
+                            <td>3636</td>
+                            <td>Disponible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CMU</strong></td>
+                            <td>33 869 42 74</td>
+                            <td>Heures ouvrables</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Centre Antipoison (CHU Fann)</strong></td>
+                            <td>33 869 18 18</td>
+                            <td>24h/24</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Violences faites aux femmes</strong></td>
+                            <td>800 805 805</td>
+                            <td>Disponible</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>⚠️ Le <strong>1515</strong> est le numéro principal pour toutes les urgences médicales. Gratuit, disponible 24h/24.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 2 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏛️ Organisation du système de santé
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>Niveau 1 — Postes de santé</h4>
+                <p>Premier contact avec le système de santé. Soins de base, consultations générales, vaccinations. Présents dans chaque quartier et village.</p>
+                <h4>Niveau 2 — Centres de santé</h4>
+                <p>Niveau intermédiaire avec des spécialités de base. Maternités, chirurgie de base, laboratoires. Au moins un par commune ou arrondissement.</p>
+                <h4>Niveau 3 — Hôpitaux (CHU et hôpitaux régionaux)</h4>
+                <p>Établissements de référence avec toutes les spécialités. Accueil des cas référés depuis les niveaux inférieurs. Présents dans les grandes villes.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 3 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏥 Principaux hôpitaux publics de Dakar
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Hôpital</th>
+                            <th>Spécialité</th>
+                            <th>Téléphone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hôpital Principal (HPD)</strong></td>
+                            <td>Urgences générales 24h/24</td>
+                            <td>33 839 50 50</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CHNU de Fann</strong></td>
+                            <td>Neurologie, Psychiatrie, Centre Antipoison</td>
+                            <td>33 869 18 18</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hôpital Aristide Le Dantec</strong></td>
+                            <td>Oncologie, Médecine générale</td>
+                            <td>33 889 38 00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hôpital Idrissa Pouye (ex-Grand Yoff)</strong></td>
+                            <td>Urgences générales</td>
+                            <td>33 869 40 50</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hôpital Dalal Jamm (Guédiawaye)</strong></td>
+                            <td>Urgences — zone nord Dakar</td>
+                            <td>33 827 08 19</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hôpital Albert Royer</strong></td>
+                            <td>Pédiatrie (enfants 0-15 ans)</td>
+                            <td>33 859 47 47</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hôpital Abass Ndao</strong></td>
+                            <td>Médecine générale</td>
+                            <td>33 822 13 37</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Centre de Diabétologie</strong></td>
+                            <td>Diabète et maladies métaboliques</td>
+                            <td>33 821 51 70</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Institut Pasteur</strong></td>
+                            <td>Analyses biologiques, maladies infectieuses</td>
+                            <td>33 839 92 00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 4 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💊 Couverture Maladie Universelle (CMU)
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>La CMU permet aux personnes les plus démunies d'accéder à une couverture du risque maladie, notamment le secteur informel et le monde rural.</p>
+                <h4>Comment adhérer ?</h4>
+                <ul>
+                    <li>Être âgé d'au moins 18 ans</li>
+                    <li>Verser des droits d'adhésion à la mutuelle de sa commune</li>
+                    <li>S'engager à cotiser régulièrement pour soi et les personnes à charge</li>
+                </ul>
+                <p><strong>Cotisation :</strong> 7 000 FCFA/personne/an — subventionnée à 50% soit 3 500 FCFA. Les personnes indigentes bénéficient d'une prise en charge totale gratuite.</p>
+                <h4>Ce que couvre la CMU</h4>
+                <ul>
+                    <li>Examens de laboratoire</li>
+                    <li>Hospitalisation</li>
+                    <li>Imagerie médicale (radio, échographie...)</li>
+                    <li>Soins bucco-dentaires</li>
+                    <li>Plus de 6 000 médicaments référencés</li>
+                </ul>
+                <p>✅ Avec la CMU, l'assuré ne paie que <strong>30%</strong> du coût de sa prestation de santé.</p>
+                <a href="https://www.agencecmu.sn" target="_blank" class="btn-lien">
+                    Agence CMU →
+                </a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 5 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🆓 Politiques de gratuité des soins
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Bénéficiaires</th>
+                            <th>Soins couverts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gratuité enfants &lt; 5 ans</strong></td>
+                            <td>Tout enfant sénégalais de moins de 5 ans</td>
+                            <td>Consultation, médicaments, vaccination, hospitalisation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plan Sésame</strong></td>
+                            <td>Personnes âgées de 60 ans et plus</td>
+                            <td>Consultations, médicaments essentiels, hospitalisations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gratuité césarienne</strong></td>
+                            <td>Toute femme enceinte sénégalaise</td>
+                            <td>Acte chirurgical + médicaments + réanimation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gratuité dialyse</strong></td>
+                            <td>Patients insuffisants rénaux</td>
+                            <td>Séances de dialyse dans les structures publiques</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Paludisme / Tuberculose / SIDA</strong></td>
+                            <td>Toute personne atteinte</td>
+                            <td>Traitement complet pris en charge par l'État</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 6 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💼 Couverture maladie pour les travailleurs
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>IPM — Institutions de Prévoyance Maladie</h4>
+                <ul>
+                    <li>Obligatoire pour tout salarié permanent d'entreprise privée</li>
+                    <li>Couvre 50% à 80% des frais : consultations, examens, médicaments</li>
+                    <li>Les membres de la famille du salarié sont également couverts</li>
+                    <li>Chaque membre reçoit un livret individuel de santé</li>
+                </ul>
+                <h4>IPRES — Retraités</h4>
+                <ul>
+                    <li>Soins gratuits dans les centres médico-sociaux de l'IPRES</li>
+                    <li>Prise en charge dans les hôpitaux conventionnés</li>
+                    <li>Couvre les consultations, hospitalisations et médicaments</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 7 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💡 Conseils pratiques
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>En cas d'urgence</h4>
+                <ul>
+                    <li>Appeler le <strong>1515</strong> (SAMU) en priorité — gratuit, 24h/24</li>
+                    <li>Indiquer : localisation précise, nature de l'urgence, état du patient</li>
+                    <li>Ne pas déplacer un blessé sauf danger immédiat</li>
+                    <li>Appeler le <strong>18</strong> (pompiers) en cas d'accident ou d'incendie</li>
+                </ul>
+                <h4>Pharmacies de garde</h4>
+                <ul>
+                    <li>Appeler le <strong>3636</strong> pour connaître la pharmacie de garde</li>
+                    <li>Les pharmacies Kermel, Nation et République à Dakar sont souvent ouvertes 24h/24</li>
+                </ul>
+                <h4>Santé mentale</h4>
+                <ul>
+                    <li>Ligne verte Ministère de la Santé : <strong>143</strong></li>
+                    <li>Service confidentiel, disponible pour toute personne en difficulté</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 8 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔗 Liens officiels utiles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul class="liste-liens">
+                    <li><a href="https://www.sante.gouv.sn" target="_blank">Ministère de la Santé</a></li>
+                    <li><a href="https://www.agencecmu.sn" target="_blank">Agence de la CMU</a></li>
+                    <li><a href="https://senegalservices.sn" target="_blank">Sénégal Services — Santé</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-contenu">
+        <div class="footer-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+        <p>Portail d'information citoyenne du Sénégal</p>
+        <p class="footer-copy">© 2026 InfoCitoyen Sénégal — Tous droits réservés</p>
+    </div>
+</footer>
+</body>
+</html>

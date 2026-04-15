@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éducation — InfoCitoyen Sénégal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="sante.html">Santé</a></li>
+        <li><a href="emploi.html">Emploi</a></li>
+        <li><a href="demarche.html">Démarches</a></li>
+        <li><a href="entrepreneuriat.html">Entrepreneuriat</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- EN-TÊTE DE PAGE -->
+<div class="page-header header-education">
+    <div class="page-header-contenu">
+        <span class="page-icone">🎓</span>
+        <h1>Éducation</h1>
+        <p>Universités, bourses, formations professionnelles et concours des grandes écoles au Sénégal</p>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="page-contenu">
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="recherche-container">
+        <input
+            type="text"
+            id="recherche"
+            class="barre-recherche"
+            placeholder="🔍 Rechercher une information..."
+            onkeyup="filtrerContenu()"
+        >
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <div class="accordeons" id="contenu-filtrable">
+
+        <!-- ACCORDÉON 1 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏛️ Universités publiques
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>Les universités publiques du Sénégal sont :</p>
+                <ul class="liste-liens">
+                    <li>
+                        <strong>UCAD</strong> — Université Cheikh Anta Diop, Dakar
+                        <a href="https://www.ucad.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>UGB</strong> — Université Gaston Berger, Saint-Louis
+                        <a href="https://www.ugb.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>UT</strong> — Université de Thiès
+                        <a href="https://www.univ-thies.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>UASZ</strong> — Université Assane Seck, Ziguinchor
+                        <a href="https://www.univ-zig.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>UAD</strong> — Université Alioune Diop, Bambey
+                        <a href="https://www.uadb.edu.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>USSEIN</strong> — Université du Sine Saloum, Kaolack
+                        <a href="https://www.ussein.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>UN-CHK</strong> — Université Numérique Cheikh Hamidou Kane
+                        <a href="https://www.unchk.edu.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>ESP</strong> — École Supérieure Polytechnique, Dakar
+                        <a href="https://www.esp.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>FASTEF</strong> — Faculté des Sciences de l'Éducation
+                        <a href="https://www.fastef.ucad.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>EBAD</strong> — École des Bibliothécaires, Archivistes et Documentalistes
+                        <a href="https://www.ebad.ucad.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>ENSA</strong> — École Nationale Supérieure d'Agriculture, Thiès
+                        <a href="https://www.ensa.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                    <li>
+                        <strong>ISEP</strong> — Instituts Supérieurs d'Enseignement Professionnel
+                        <a href="https://www.isep.sn" target="_blank" class="btn-lien-petit">Visiter →</a>
+                    </li>
+                </ul>
+                <p>Frais d'inscription : entre <strong>25 000 et 75 000 FCFA/an</strong></p>
+                <a href="https://orientation.campusen.sn" target="_blank" class="btn-lien">
+                    Plateforme d'orientation CampusEN →
+                </a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 2 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                💰 Bourses d'études
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>Bourse nationale</h4>
+                <p>Allouée aux étudiants inscrits dans une université ou institut privé agréé.</p>
+                <h4>Bourses à l'étranger</h4>
+                <p>Dépôt exclusivement en ligne via <strong>boursesetrangeres.campusen.sn</strong></p>
+                <h4>Aides municipales</h4>
+                <p>Disponibles auprès de la mairie de votre commune pour études locales ou à l'étranger.</p>
+                <a href="https://mesrisenegal.sn" target="_blank" class="btn-lien">
+                    Ministère Enseignement Supérieur →
+                </a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 3 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔧 Formation professionnelle (ONFP)
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <p>L'ONFP propose des formations qualifiantes dans les secteurs suivants :</p>
+                <ul>
+                    <li>Agriculture et agroalimentaire</li>
+                    <li>Bâtiment et travaux publics (BTP)</li>
+                    <li>Industrie et métiers techniques</li>
+                    <li>Numérique et nouvelles technologies</li>
+                </ul>
+                <p><strong>Aucune condition académique</strong> n'est requise pour la plupart des formations.</p>
+                <a href="https://sigof.onfp.sn" target="_blank" class="btn-lien">
+                    Plateforme ONFP →
+                </a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 4 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏆 Concours des grandes écoles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>École</th>
+                            <th>Niveau</th>
+                            <th>Domaine</th>
+                            <th>Lien officiel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ESP</strong></td>
+                            <td>BAC / Terminale</td>
+                            <td>Ingénierie, Informatique, Génie Civil</td>
+                            <td><a href="https://concours.esp.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENA</strong></td>
+                            <td>BAC (Cycle B) / Master (Cycle A)</td>
+                            <td>Administration publique</td>
+                            <td><a href="https://concoursena.sec.gouv.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>FASTEF</strong></td>
+                            <td>BAC / Licence / Master 2</td>
+                            <td>Formation des enseignants</td>
+                            <td><a href="https://concours.ucad.sn/fastef" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENDSS</strong></td>
+                            <td>BAC</td>
+                            <td>Infirmier, Sage-femme, Santé</td>
+                            <td><a href="https://www.endss.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENSA</strong></td>
+                            <td>BAC S</td>
+                            <td>Agriculture, Agronomie</td>
+                            <td><a href="https://www.ensa.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENOA</strong></td>
+                            <td>Licence 3</td>
+                            <td>Officier des Forces Armées</td>
+                            <td><a href="https://www.forcesarmees.gouv.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>EBAD</strong></td>
+                            <td>BAC</td>
+                            <td>Bibliothèques, Archives, Documentation</td>
+                            <td><a href="https://www.ebad.ucad.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENSETP</strong></td>
+                            <td>Licence</td>
+                            <td>Enseignement technique et professionnel</td>
+                            <td><a href="https://www.ensetp.ucad.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>EAMAC</strong></td>
+                            <td>BAC S ou T</td>
+                            <td>Météorologie, Aviation Civile</td>
+                            <td><a href="https://www.eamac.aero" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>🗓️ Les concours ont généralement lieu entre <strong>avril et septembre</strong> chaque année.</p>
+                <div class="btn-groupe">
+                    <a href="https://samabac.sn" target="_blank" class="btn-lien">
+                        Annales et ressources — SamaBac →
+                    </a>
+                    <a href="https://guindima.sn" target="_blank" class="btn-lien">
+                        Calendrier des concours — GuindiMa →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 5 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔗 Liens officiels utiles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul class="liste-liens">
+                    <li><a href="https://mesrisenegal.sn" target="_blank">Ministère Enseignement Supérieur (MESRI)</a></li>
+                    <li><a href="https://orientation.campusen.sn" target="_blank">Orientation BAC — CampusEN</a></li>
+                    <li><a href="https://sigof.onfp.sn" target="_blank">Formation professionnelle — ONFP</a></li>
+                    <li><a href="https://senegalservices.sn" target="_blank">Sénégal Services</a></li>
+                    <li><a href="https://samabac.sn" target="_blank">Annales et concours — SamaBac</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-contenu">
+        <div class="footer-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+        <p>Portail d'information citoyenne du Sénégal</p>
+        <p class="footer-copy">© 2026 InfoCitoyen Sénégal — Tous droits réservés</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

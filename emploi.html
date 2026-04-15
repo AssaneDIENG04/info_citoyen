@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emploi — InfoCitoyen Sénégal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="education.html">Éducation</a></li>
+        <li><a href="sante.html">Santé</a></li>
+        <li><a href="emploi.html">Emploi</a></li>
+        <li><a href="demarche.html">Démarches</a></li>
+        <li><a href="entrepreneuriat.html">Entrepreneuriat</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- EN-TÊTE DE PAGE -->
+<div class="page-header header-emploi">
+    <div class="page-header-contenu">
+        <span class="page-icone">💼</span>
+        <h1>Emploi</h1>
+        <p>Structures d'appui, contrats de travail, droits des salariés, stages et plateformes d'emploi au Sénégal</p>
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="page-contenu">
+
+    <!-- BARRE DE RECHERCHE -->
+    <div class="recherche-container">
+        <input
+            type="text"
+            id="recherche"
+            class="barre-recherche"
+            placeholder="🔍 Rechercher une information..."
+            onkeyup="filtrerContenu()"
+        >
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <div class="accordeons" id="contenu-filtrable">
+
+        <!-- ACCORDÉON 1 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🏢 Structures d'appui à l'emploi
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <h4>ANPEJ — Agence Nationale pour la Promotion de l'Emploi des Jeunes</h4>
+                <p>Service public dont la mission est de promouvoir l'emploi des jeunes en garantissant la non-discrimination et l'égalité professionnelle.</p>
+                <ul>
+                    <li>Orientation et coaching en techniques de recherche d'emploi</li>
+                    <li>Intermédiation et placement auprès des entreprises</li>
+                    <li>Appui à la création d'entreprise</li>
+                    <li>Accompagnement et suivi des projets professionnels</li>
+                </ul>
+                <div class="btn-groupe">
+                    <a href="https://anpej.sn" target="_blank" class="btn-lien">Site ANPEJ →</a>
+                    <a href="https://emploijeunes.sn" target="_blank" class="btn-lien">S'inscrire →</a>
+                </div>
+                <h4>3FPT — Fonds de Financement de la Formation Professionnelle</h4>
+                <p>Offre des bons de formations initiales du CAP à la Licence dans toutes les régions du Sénégal.</p>
+                <ul>
+                    <li>Eligible : Sénégalais âgés de 15 à 40 ans</li>
+                    <li>Inclus : personnes vulnérables, déscolarisés, migrants de retour</li>
+                    <li>La bourse couvre <strong>90%</strong> des frais de formation</li>
+                    <li>Inscriptions en ligne chaque année en octobre</li>
+                </ul>
+                <a href="https://3fpt.sn" target="_blank" class="btn-lien">Site 3FPT →</a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 2 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                📄 Types de contrats de travail
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Type de contrat</th>
+                            <th>Caractéristiques</th>
+                            <th>Durée max</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CDI</strong></td>
+                            <td>Forme normale de la relation de travail. Offre une stabilité à l'employé.</td>
+                            <td>Illimitée</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CDD</strong></td>
+                            <td>Pour emplois temporaires ou saisonniers. Doit être écrit obligatoirement.</td>
+                            <td>2 ans max</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contrat temporaire</strong></td>
+                            <td>Pour remplacer un salarié absent ou des travaux spécifiques.</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stage d'incubation</strong></td>
+                            <td>Découverte du milieu professionnel</td>
+                            <td>2 ans max</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stage pré-embauche</strong></td>
+                            <td>Préparation à une offre d'emploi potentielle</td>
+                            <td>2 ans max</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stage de requalification</strong></td>
+                            <td>Acquisition de nouvelles compétences</td>
+                            <td>2 ans max</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>⚠️ Tout contrat non écrit est présumé être un <strong>CDI</strong>. Le salaire doit être accompagné d'un bulletin de paie obligatoire.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 3 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                ⚖️ Droits fondamentaux des travailleurs
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Droit</th>
+                            <th>Détail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Salaire minimum (SMIG)</strong></td>
+                            <td>Fixé par décret — accompagné obligatoirement d'un bulletin de paie</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Congés payés</strong></td>
+                            <td>2 jours ouvrables par mois (24 jours/an) + 1 jour/an par enfant de moins de 14 ans</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Durée du travail</strong></td>
+                            <td>40h/semaine maximum — heures sup. payées ou compensées par du repos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Congé maternité</strong></td>
+                            <td>14 semaines (6 avant + 8 après accouchement) — salaire maintenu à 100%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Repos hebdomadaire</strong></td>
+                            <td>Minimum 24h consécutives par semaine, en principe le dimanche</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protection licenciement</strong></td>
+                            <td>Tout licenciement nécessite un entretien préalable et un motif valable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 4 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🎓 Les stages — ce qu'il faut savoir
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul>
+                    <li>Le contrat de stage doit obligatoirement être rédigé par écrit</li>
+                    <li>La durée maximale d'un stage ne peut dépasser <strong>2 ans</strong> renouvellements inclus</li>
+                    <li>L'indemnité mensuelle ne peut être inférieure au salaire minimum de la catégorie</li>
+                    <li>À la fin du contrat, l'employeur doit remettre une <strong>attestation de stage</strong></li>
+                    <li>Tous les contrats de stage doivent être soumis à l'Inspection du Travail</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 5 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🖥️ Plateformes de recherche d'emploi et de stages
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <table class="tableau-info">
+                    <thead>
+                        <tr>
+                            <th>Plateforme</th>
+                            <th>Type</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ANPEJ</strong></td>
+                            <td>Officiel — emploi jeunes</td>
+                            <td><a href="https://emploijeunes.sn" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stage Sénégal</strong></td>
+                            <td>Officiel — stages avant et après diplôme</td>
+                            <td><a href="https://stagesenegal.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emploi Dakar</strong></td>
+                            <td>Offres CDI, CDD, stages</td>
+                            <td><a href="https://emploidakar.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emploi Sénégal</strong></td>
+                            <td>Offres tous secteurs</td>
+                            <td><a href="https://emploisenegal.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SenJob</strong></td>
+                            <td>Offres et stages</td>
+                            <td><a href="https://senjob.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>LinkedIn</strong></td>
+                            <td>Réseau professionnel + offres stages</td>
+                            <td><a href="https://linkedin.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Indeed Sénégal</strong></td>
+                            <td>Offres tous profils</td>
+                            <td><a href="https://sn.indeed.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JobAfrique</strong></td>
+                            <td>Stages et emplois Afrique de l'Ouest</td>
+                            <td><a href="https://jobafrique.com" target="_blank" class="btn-lien-petit">Visiter →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 6 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                ⚠️ En cas de litige au travail
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul>
+                    <li><strong>Inspection du Travail</strong> — pour les litiges individuels (salaires impayés, conditions de travail...)</li>
+                    <li><strong>Tribunal du Travail (Prud'hommes)</strong> — pour licenciement abusif</li>
+                    <li><strong>Médiation syndicale</strong> — via les syndicats professionnels reconnus</li>
+                </ul>
+                <p>💡 Conservez toujours une copie de votre contrat, vos bulletins de paie et tout échange écrit avec votre employeur.</p>
+                <a href="https://senegalservices.sn" target="_blank" class="btn-lien">
+                    Sénégal Services — Emploi →
+                </a>
+            </div>
+        </div>
+
+        <!-- ACCORDÉON 7 -->
+        <div class="accordeon">
+            <button class="accordeon-titre" onclick="toggleAccordeon(this)">
+                🔗 Liens officiels utiles
+                <span class="accordeon-icone">+</span>
+            </button>
+            <div class="accordeon-contenu">
+                <ul class="liste-liens">
+                    <li><a href="https://anpej.sn" target="_blank">ANPEJ</a></li>
+                    <li><a href="https://3fpt.sn" target="_blank">3FPT</a></li>
+                    <li><a href="https://emploi.gouv.sn" target="_blank">Ministère de l'Emploi</a></li>
+                    <li><a href="https://senegalservices.sn" target="_blank">Sénégal Services — Emploi</a></li>
+                    <li><a href="https://stagesenegal.com" target="_blank">Stage Sénégal</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-contenu">
+        <div class="footer-logo"><span class="logo-sn">SN</span> InfoCitoyen</div>
+        <p>Portail d'information citoyenne du Sénégal</p>
+        <p class="footer-copy">© 2026 InfoCitoyen Sénégal — Tous droits réservés</p>
+    </div>
+</footer>
+</body>
+</html>
